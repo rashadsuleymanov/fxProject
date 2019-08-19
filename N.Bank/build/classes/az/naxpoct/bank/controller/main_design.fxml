@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="1152.0" style="-fx-background-color: #E5E3E3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.naxpoct.bank.controller.MainController">
+    <children>
+        <VBox prefHeight="801.0" prefWidth="297.0" style="-fx-background-color: #3F2B63;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane prefHeight="171.0" prefWidth="297.0" style="-fx-background-color: #2A1C42;">
+                    <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="XING" layoutX="30.0" layoutY="74.0" size="30" />
+                        <Label layoutX="60.0" layoutY="44.0" prefHeight="39.0" prefWidth="141.0" text="Naxçıvanpoçt" textFill="WHITE">
+                            <font>
+                                <Font name="Times New Roman Bold" size="22.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="210.0" layoutY="41.0" prefHeight="47.0" prefWidth="59.0" text="MMC" textFill="#56bc2b">
+                            <font>
+                                <Font name="Aharoni Bold" size="22.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <JFXButton fx:id="listBtnId" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#handleClick" prefHeight="77.0" prefWidth="299.0" stylesheets="@main.css" text="Listələmək" textFill="WHITE">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LIST" size="20" />
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="hesabatBtnİd" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#handleClick" prefHeight="77.0" prefWidth="299.0" stylesheets="@main.css" text="Hesabat" textFill="WHITE">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="20" />
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </JFXButton>
+            </children>
+        </VBox>
+        <JFXButton fx:id="logoutBtnİd" alignment="CENTER_RIGHT" layoutX="1044.0" layoutY="13.0" onAction="#handleLogoutClick" prefHeight="47.0" prefWidth="99.0" style="-fx-background-radius: 25; -fx-background-color: #65524E;" text="Çıxış" textFill="WHITE">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </JFXButton>
+        <FontAwesomeIconView fill="#ee0f0f" glyphName="POWER_OFF" layoutX="1055.0" layoutY="50.0" size="30" text="" wrappingWidth="21.428571701049805" />
+        <StackPane layoutX="319.0" layoutY="198.0" prefHeight="369.0" prefWidth="809.0">
+            <children>
+                <Pane fx:id="pnExcelList" prefHeight="365.0" prefWidth="718.0" style="-fx-background-color: #fff;">
+                    <children>
+                        <Label fx:id="labelListFileId" alignment="CENTER" layoutX="4.0" layoutY="127.0" prefHeight="39.0" prefWidth="809.0" textFill="#9a9090">
+                            <font>
+                                <Font name="Times New Roman Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <JFXButton fx:id="excelFileListBtnId" layoutX="223.0" layoutY="28.0" onAction="#handleExcelFayliListeleClick" prefHeight="77.0" prefWidth="353.0" style="-fx-background-color: #BCB0AD; -fx-background-radius: 25;" text="Excel Faylını Listələ">
+                            <graphic>
+                                <FontAwesomeIconView fill="#3a27b5" glyphName="NEWSPAPER_ALT" size="30" />
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </JFXButton>
+                        <Label fx:id="faylListLabelProgressBar" alignment="CENTER" layoutX="4.0" layoutY="175.0" prefHeight="40.0" prefWidth="809.0" textFill="#5d5dfb">
+                            <font>
+                                <Font name="Times New Roman Bold" size="36.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane fx:id="pnHesabatCixar" prefHeight="382.0" prefWidth="793.0" style="-fx-background-color: #fff;">
+                    <children>
+                        <JFXButton fx:id="umumiHesabatBtnId" layoutX="217.0" layoutY="28.0" onAction="#handleUmumiHesabatCixarClick" prefHeight="77.0" prefWidth="353.0" style="-fx-background-color: #BCB0AD; -fx-background-radius: 25;" text="Ümumi Hesabatı Çıxar">
+                            <graphic>
+                                <FontAwesomeIconView fill="#3a27b5" glyphName="LIST_ALT" size="30" />
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </JFXButton>
+                        <Label fx:id="hesabatLabelProgressBar" alignment="CENTER" layoutY="169.0" prefHeight="40.0" prefWidth="809.0" textFill="#5d5dfb">
+                            <font>
+                                <Font name="Times New Roman Bold" size="36.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelHesabatFileId" alignment="CENTER" layoutY="130.0" prefHeight="39.0" prefWidth="809.0" textFill="#978282">
+                            <font>
+                                <Font name="Times New Roman Bold" size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #666;">
+                    <children>
+                        <Label alignment="CENTER" layoutX="194.0" layoutY="115.0" prefHeight="118.0" prefWidth="270.0" text="Naxçıvanpoçt" textFill="#fafbff">
+                            <font>
+                                <Font name="SansSerif Regular" size="44.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="481.0" layoutY="118.0" prefHeight="118.0" prefWidth="172.0" text="MMC" textFill="#75bf39">
+                            <font>
+                                <Font name="Aharoni Bold" size="44.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+        <Label alignment="CENTER" layoutX="429.0" layoutY="582.0" prefHeight="27.0" prefWidth="495.0" text="Copyright-2018 MEM - All Rights Reserved. ">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <FontAwesomeIconView fill="#4972a4" glyphName="MINUS_SQUARE" layoutX="984.0" layoutY="54.0" onMouseClicked="#minimaze_stage" size="45" wrappingWidth="42.428577452898026" />
+        <Pane fx:id="pnlStatusId" layoutX="296.0" layoutY="70.0" prefHeight="91.0" prefWidth="857.0" style="-fx-background-color: #3E9B4F;" AnchorPane.bottomAnchor="454.0" AnchorPane.leftAnchor="296.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="70.0">
+            <children>
+                <Label fx:id="lblStatusId" layoutX="54.0" layoutY="2.0" prefHeight="62.0" prefWidth="411.0" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+      
+    </children>
+</AnchorPane>
