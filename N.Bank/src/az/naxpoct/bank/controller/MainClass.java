@@ -20,7 +20,7 @@ import javafx.stage.StageStyle;
  * @author Rashad Suleymanov
  */
 public class MainClass extends Application {
-    
+    //yess adlindi!
     private double xOffset = 0;
     private double yOffset = 0;
     
